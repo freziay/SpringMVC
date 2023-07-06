@@ -1,4 +1,4 @@
-package ru.netology.service;
+package ru.netology;
 
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.connector.Connector;
@@ -15,7 +15,7 @@ public class Main {
         tomcat.setBaseDir(baseDir.toAbsolutePath().toString());
 
         final var connector = new Connector();
-        connector.setPort(9999);
+        connector.setPort(8080);
         tomcat.setConnector(connector);
 
         tomcat.getHost().setAppBase(".");
